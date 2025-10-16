@@ -1,0 +1,19 @@
+.productListContainer {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 30px;
+}
