@@ -15,7 +15,7 @@ const ProductDetail = () => {
   }, [dispatch, slug]);
 
   const handleBack = () => {
-    navigate("/products");
+    navigate(-1);
   };
 
   if (!product) {

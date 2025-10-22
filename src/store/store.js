@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
 
 const additionalMiddlewares = [];
 
-if (process.env.NODE_ENV === "development") {
+if (import.meta.env.NODE_ENV === "development") {
   additionalMiddlewares.push(logger);
 }
 
@@ -20,7 +20,7 @@ const store = configureStore({
 
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(additionalMiddlewares),
-  devTools: process.env.NODE_ENV !== "production",
+  devTools: import.meta.env.NODE_ENV !== "production",
 });
 
 export default store;
